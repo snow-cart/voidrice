@@ -11,7 +11,7 @@
 #           |  \__, |_|\__|  \___\___/|_| |_|_| |_|\__, | |             #
 #           |  |___/                               |___/  |             #
 #           |                                             |             #
-#           |    https://github.com/kiprasmel/voidrice    |             #
+#           |    https://github.com/snow-cart/voidrice    |             #
 #           |                                             |             #
 #           |   __________________________________________|_            #
 #            \_/____________________________________________/           #
@@ -23,8 +23,8 @@
 [init]
 	defaultBranch = master
 [user]
-	name = Kipras Melnikovas
-	email = kipras@kipras.org
+	name = Mykolas Spu
+	email = mykolas@bonk.lt
 	# signingkey is $GPG_SIGNING_KEY
 [core]
 	# editor is $EDITOR
@@ -39,15 +39,15 @@
 [rerere]
 	enabled = true
 [imap]
-	host = mail.kipras.org
-	user = kipras@kipras.org
+	host = mail.bonk.lt
+	user = mykolas@bonk.lt
 	port = 993
 	folder = Drafts
 [sendemail]
 	confirm = always
 	smtpEncryption = tls
-	smtpServer = mail.kipras.org
-	smtpUser = kipras
+	smtpServer = mail.bonk.lt
+	smtpUser = mykolas
 	smtpServerPort = 587
 [format]
 	signoff = true
@@ -179,9 +179,9 @@
 	sodp = !git diff "origin"/"$(git parent)" "$(git parent)" $*
 
 	bp = backup
-	#backup = backup # github.com/kiprasmel/dotfiles/.local/bin/tools/git-backup
-	#behind = behind # github.com/kiprasmel/dotfiles/.local/bin/tools/git-behind
-	#behind-remote = behind-remote # github.com/kiprasmel/dotfiles/.local/bin/statusbar/git-behind-remote
+	#backup = backup # github.com/snow-cart/dotfiles/.local/bin/tools/git-backup
+	#behind = behind # github.com/snow-cart/dotfiles/.local/bin/tools/git-behind
+	#behind-remote = behind-remote # github.com/snow-cart/dotfiles/.local/bin/statusbar/git-behind-remote
 
 	c = commit
 	cm = commit-msg
@@ -232,7 +232,7 @@
 	fd = fetch --unshallow # deep
 	
 	#g =
-	#hop = hop # https://github.com/kiprasmel/voidrice/blob/master/.local/bin/git-hop
+	#hop = hop # https://github.com/snow-cart/voidrice/blob/master/.local/bin/git-hop
 
 	# cope https://github.com/git/git/commit/936d2c9301e41a84a374b98f92777e00d321a2ea
 	ignore = update-index --assume-unchanged
@@ -270,7 +270,7 @@
 	pa = patch
 	patch = !GIT_PAGER='' git diff -u
 
-	# https://github.com/kiprasmel/voidrice/tree/master/.local/bin/git-pad
+	# https://github.com/snow-cart/voidrice/tree/master/.local/bin/git-pad
 	# "patch delta"
 	#pad = pad              # stats (+, -, ±) from ref to HEAD + uncommited changes
 	pado = !git pad ${1:-@} # stats (+, -, ±) of *only* the ref
@@ -347,4 +347,3 @@
 	#x =
 	#y =
 	#z =
-

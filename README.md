@@ -1,6 +1,6 @@
 # voidrice
 
-Kipras' fork of [Luke Smith](http://lukesmith.xyz)'s [dotfiles](https://github.com/lukesmithxyz/voidrice).
+Mykolas' fork of [Kipras](https://github.com/kiprasmel)' [fork](https://github.com/kiprasmel/voidrice) of [Luke Smith](http://lukesmith.xyz)'s [dotfiles](https://github.com/lukesmithxyz/voidrice).
 
 These are the dotfiles deployed by [LARBS](https://larbs.xyz), as seen on [Luke's YouTube channel](https://youtube.com/c/lukesmithxyz).
 
@@ -48,11 +48,11 @@ These are the dotfiles deployed by [LARBS](https://larbs.xyz), as seen on [Luke'
 On an Arch Linux (or similar) system, use [LARBS](https://larbs.xyz) ([Kipras' fork](https://github.com/kiprasmel/larbs)) to autoinstall everything:
 
 ```sh
-curl -LO http://raw.githubusercontent.com/kiprasmel/LARBS/master/larbs.sh
+curl -LO http://raw.githubusercontent.com/snow-cart/LARBS/master/larbs.sh
 
 # inspect the script, and then
 
-./larbs.sh -r https://github.com/kiprasmel/voidrice
+./larbs.sh -r https://github.com/snow-cart/voidrice
 ```
 
 ### MacOS
@@ -66,7 +66,7 @@ https://notes.kipras.org/macos.html#xe5IP3iU-
 
 ### Other
 
-alternatively, clone the repository directly to your home directory and install [the prerequisite programs](https://github.com/kiprasmel/LARBS/blob/master/progs.csv) (or equivalent, e.g. on macos at least GNU `coreutils` are needed).
+alternatively, clone the repository directly to your home directory and install [the prerequisite programs](https://github.com/snow-cart/LARBS/blob/master/progs.csv) (or equivalent, e.g. on macos at least GNU `coreutils` are needed).
 
 ## Managing these dotfiles
 
@@ -78,7 +78,7 @@ Fork the repository and clone it as a bare repo:
 # fork in github
 
 # then, clone into a bare repo:
-git clone --bare http://github.com/<your-username>/voidrice ~/.dotfiles
+git clone --bare http://github.com/snow-cart/voidrice ~/.dotfiles
 
 # create an alias to manage the dotfiles
 cat >> ~/.zshrc <<'EOF'
@@ -98,7 +98,7 @@ originally inspired by "bare repository and alias method" in https://wiki.archli
 
 ```sh
 # see above for the "config" alias
-config remote add upstream https://github.com/kiprasmel/voidrice
+config remote add upstream https://github.com/snow-cart/voidrice
 ```
 
 and occationally perform
@@ -108,21 +108,20 @@ config fetch --all
 config merge upstream/master
 ```
 
-though, when merging, i recommend reviewing each change, because even if it auto-merged, the results are not always what you want.
+though, when merging, I recommend reviewing each change, because even if it auto-merged, the results are not always what you want.
 
-e.g. i myself merge from Luke, and there are sometimes deleted files, or renamed directories, or just scripts/configs changed
-in a way that i don't necessarily like, and so i pick what i want & how i want.
+e.g. Kipras, and in turn I, merge from Luke, and there are sometimes deleted files, or renamed directories, or just scripts/configs changed
+in a way that I don't necessarily like, and so I pick what I want & how I want.
 
-e.g. Luke has moved on from i3 to dwm, meanwhile i myself am staying with i3.
+e.g. Luke has moved on from i3 to dwm, meanwhile me and Kipras are staying with i3.
 
 ### Performing merges comfortably
 
 because of the bare repository, you couldn't simply use vscode to open the $HOME directory & start resolving changes.
-(i [asked](https://github.com/microsoft/vscode/issues/80946), but it's not available as of yet).
+(Kipras [asked](https://github.com/microsoft/vscode/issues/80946), but it's not available as of yet).
 
 but, turns out there's a work-around: https://github.com/microsoft/vscode/issues/77215#issuecomment-615834544
 
 ```sh
 GIT_WORK_TREE="$HOME" GIT_DIR="$HOME/.dotfiles" code "$HOME"
 ```
-
